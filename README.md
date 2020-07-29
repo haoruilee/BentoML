@@ -159,7 +159,7 @@ prediction request:
 BentoML provides a convenient way to containerize the model API server with Docker:
 
 1. Find where the SavedBundle directory is created in the file system:
-    * The saved path is return by the `iris_classifier_service.save()` call
+    * The saved path is returned by the `iris_classifier_service.save()` call
     * The saved path is printed in the stdout when saving: `INFO - BentoService bundle 'IrisClassifier:20200121114004_360ECB' saved to: ...`
     * Use the `bentoml get IrisClassifier:latest` command to view all the metadata including saved path
 
@@ -178,7 +178,7 @@ docker build -t iris-classifier $saved_path
 docker run -p 5000:5000 iris-classifier
 ```
 
-This docker images makes it possible to deploy BentoML saved bundle to container 
+This docker image makes it possible to deploy BentoML saved bundle to container 
 orchestration platforms such as
 [Kubeflow](https://www.kubeflow.org/docs/components/serving/bentoml/),
 [Knative](https://knative.dev/community/samples/serving/machinelearning-python-bentoml/),
